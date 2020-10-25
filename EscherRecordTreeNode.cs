@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 using NPOI.DDF;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     public class EscherRecordTreeNode : AbstractRecordTreeNode
     {

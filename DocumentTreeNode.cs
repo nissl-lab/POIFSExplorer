@@ -29,7 +29,7 @@ using NPOI.POIFS.FileSystem;
 using System.IO;
 using NPOI.Util;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     internal class DocumentTreeNode : AbstractTreeNode
     {

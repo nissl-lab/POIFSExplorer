@@ -36,7 +36,7 @@ using NPOI.HSSF.Record.Aggregates;
 using NPOI.DDF;
 using NPOI.HSSF.Model;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     internal class RecordTreeNode : AbstractRecordTreeNode
     {

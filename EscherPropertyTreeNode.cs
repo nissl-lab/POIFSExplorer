@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using NPOI.DDF;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     public class EscherPropertyTreeNode:AbstractRecordTreeNode
     {

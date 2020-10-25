@@ -8,7 +8,7 @@ using NPOI.HSSF.Record;
 using NPOI.HSSF.Util;
 
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     internal class CellValueRecordTreeNode : AbstractRecordTreeNode
     {

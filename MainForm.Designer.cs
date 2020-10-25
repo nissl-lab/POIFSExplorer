@@ -1,4 +1,4 @@
-﻿namespace NPOI.Tools.POIFSBrowser
+﻿namespace NPOI.Tools.POIFSExplorer
 {
     partial class MainForm
     {
@@ -93,7 +93,7 @@
             // 
             // fileOpenMenuItem
             // 
-            this.fileOpenMenuItem.Image = global::NPOI.Tools.POIFSBrowser.Properties.Resources.Open;
+            this.fileOpenMenuItem.Image = global::NPOI.Tools.POIFSExplorer.Properties.Resources.Open;
             this.fileOpenMenuItem.Name = "fileOpenMenuItem";
             this.fileOpenMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.fileOpenMenuItem.Size = new System.Drawing.Size(164, 22);
@@ -149,7 +149,7 @@
             // openToolStripButton
             // 
             this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.openToolStripButton.Image = global::NPOI.Tools.POIFSBrowser.Properties.Resources.Open;
+            this.openToolStripButton.Image = global::NPOI.Tools.POIFSExplorer.Properties.Resources.Open;
             this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripButton.Name = "openToolStripButton";
             this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
@@ -161,7 +161,7 @@
             // 
             this.refreshToolScripButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.refreshToolScripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.refreshToolScripButton.Image = global::NPOI.Tools.POIFSBrowser.Properties.Resources.arrow_refresh;
+            this.refreshToolScripButton.Image = global::NPOI.Tools.POIFSExplorer.Properties.Resources.arrow_refresh;
             this.refreshToolScripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.refreshToolScripButton.Name = "refreshToolScripButton";
             this.refreshToolScripButton.Size = new System.Drawing.Size(23, 22);
@@ -223,7 +223,7 @@
             // 
             // saveAsMenu
             // 
-            this.saveAsMenu.Image = global::NPOI.Tools.POIFSBrowser.Properties.Resources.SaveAs;
+            this.saveAsMenu.Image = global::NPOI.Tools.POIFSExplorer.Properties.Resources.SaveAs;
             this.saveAsMenu.Name = "saveAsMenu";
             this.saveAsMenu.Size = new System.Drawing.Size(129, 22);
             this.saveAsMenu.Text = "Save as...";

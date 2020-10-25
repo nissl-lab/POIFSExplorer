@@ -7,7 +7,7 @@ using NPOI.HSSF.Record;
 using System.Collections;
 using NPOI.SS.Util;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     class RecordAggregateTreeNode:AbstractRecordTreeNode
     {

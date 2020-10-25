@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     public partial class AboutDialog : Form
     {

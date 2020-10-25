@@ -8,8 +8,8 @@
     <ProjectGuid>{1D3BE35D-A885-4A96-BE95-94F81307F4DE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NPOI.Tools.POIFSBrowser</RootNamespace>
-    <AssemblyName>POIFSBrowser</AssemblyName>
+    <RootNamespace>NPOI.Tools.POIFSExplorer</RootNamespace>
+    <AssemblyName>POIFSExplorer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>

@@ -28,7 +28,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     static class Program
     {

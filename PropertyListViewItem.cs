@@ -31,7 +31,7 @@ using System.Windows.Forms;
 using NPOI.HPSF;
 using NPOI.HPSF.Wellknown;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     internal class PropertyListViewItem : ListViewItem, IComparable<PropertyListViewItem>
     {

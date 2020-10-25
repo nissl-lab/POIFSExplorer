@@ -40,7 +40,7 @@ using NPOI.SS.Util;
 using NPOI.DDF;
 using NPOI.HSSF.Record.Chart;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     internal class DirectoryTreeNode : AbstractTreeNode
     {

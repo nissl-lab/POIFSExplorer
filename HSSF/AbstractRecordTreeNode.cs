@@ -7,7 +7,7 @@ using System.Reflection;
 using NPOI.HSSF.Record;
 using NPOI.SS.Formula.PTG;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     public abstract class AbstractRecordTreeNode:TreeNode
     {

@@ -1,4 +1,4 @@
-﻿namespace NPOI.Tools.POIFSBrowser
+﻿namespace NPOI.Tools.POIFSExplorer
 {
     partial class AboutDialog
     {
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new NPOI.Tools.POIFSBrowser.AboutDialog.EtchedBorderedPanel();
+            this.flowLayoutPanel1 = new NPOI.Tools.POIFSExplorer.AboutDialog.EtchedBorderedPanel();
             this.okButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.webSiteLink = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,29 +44,19 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 110);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(524, 30);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(526, 30);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.okButton.Location = new System.Drawing.Point(438, 3);
+            this.okButton.Location = new System.Drawing.Point(440, 3);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(83, 25);
             this.okButton.TabIndex = 0;
             this.okButton.Text = "OK";
             this.okButton.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::NPOI.Tools.POIFSBrowser.Properties.Resources.NET_h_rgb_2;
-            this.pictureBox1.Location = new System.Drawing.Point(184, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(328, 81);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -74,18 +64,28 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 46);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Developed by using open source NPOI library which is available at:";
+            this.label1.Text = "Developed by the NPOI team\r\n\r\nHome page";
             // 
             // webSiteLink
             // 
             this.webSiteLink.AutoSize = true;
             this.webSiteLink.Location = new System.Drawing.Point(12, 55);
             this.webSiteLink.Name = "webSiteLink";
-            this.webSiteLink.Size = new System.Drawing.Size(170, 13);
+            this.webSiteLink.Size = new System.Drawing.Size(150, 13);
             this.webSiteLink.TabIndex = 3;
             this.webSiteLink.TabStop = true;
-            this.webSiteLink.Text = "http://www.codeplex.com/NPOI";
+            this.webSiteLink.Text = "http://github.com/nissl-lab/";
             this.webSiteLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.webSiteLink_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::NPOI.Tools.POIFSExplorer.Properties.Resources.NET_h_rgb_2;
+            this.pictureBox1.Location = new System.Drawing.Point(192, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(328, 81);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // AboutDialog
             // 
@@ -93,7 +93,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(524, 140);
+            this.ClientSize = new System.Drawing.Size(526, 140);
             this.Controls.Add(this.webSiteLink);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -107,7 +107,7 @@
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "About POIFS Browser";
+            this.Text = "About POIFS Explorer";
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -116,11 +116,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private EtchedBorderedPanel flowLayoutPanel1;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel webSiteLink;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

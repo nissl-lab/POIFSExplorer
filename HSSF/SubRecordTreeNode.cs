@@ -33,7 +33,7 @@ using System.Reflection;
 using System.Collections;
 using NPOI.HSSF.Record;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     internal class SubRecordTreeNode : AbstractRecordTreeNode
     {

@@ -30,7 +30,7 @@ using System;
 using System.Windows.Forms;
 using NPOI.POIFS.FileSystem;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     internal abstract class AbstractTreeNode : TreeNode, IComparable<AbstractTreeNode>
     {

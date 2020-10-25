@@ -4,7 +4,7 @@ using System.Text;
 using NPOI.HSSF.Record.Aggregates;
 using NPOI.HSSF.Record;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     public class MockRecordVisitor : RecordVisitor
     {

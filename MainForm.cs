@@ -35,7 +35,7 @@ using NPOI.POIFS.FileSystem;
 using NPOI.HSSF.UserModel;
 using NPOI.HSSF.Record;
 
-namespace NPOI.Tools.POIFSBrowser
+namespace NPOI.Tools.POIFSExplorer
 {
     public partial class MainForm : Form
     {
