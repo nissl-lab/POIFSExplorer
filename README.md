@@ -1,4 +1,4 @@
-We are very excited to create a standalone repo for this old/ancient tool in Nissl Lab. This tool exists for a long time although not many developers know it. It was located in tools/POIFS Browser folder. 
+We are very excited to create a standalone repo for this old/ancient tool in Nissl Lab. This tool exists for a long time although not many developers know it. It was located in `NPOI repo`/tools/`POIFS Browser` folder. 
 
 # POIFS Explorer
 
