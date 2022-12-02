@@ -8,6 +8,13 @@ This is a tool originally created by [Huseyin Tufekcilerli](https://github.com/h
 
 This is a tool to inspect any OLE2 Document compatible files (or ActiveX documents). 
 
+# Supported files
+- .xls Excel document
+- .doc Word document
+- .ppt Powerpoint document
+- .poifs
+- .cpk PAL3 file (Thanks to Jiaqi Liu for his [CPK.NET library](https://github.com/0x7c13/Cpk.Net))
+
 ## Interesting Old Story of this Tool
 At the begining, I thought only NPOI team use this tool to view the generated/existing OLE2 files. However, someone from PHP Excel team reaching me via email and say hey, we also use this tool. Then I found there are more users than we originally thought. 
 
