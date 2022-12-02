@@ -44,13 +44,13 @@ namespace NPOI.Tools.POIFSExplorer
                         this.Nodes.Add(new RecordTreeNode((RowRecord)recordenum.Current));
                     }
                 }
-                CellValueRecordInterface[] valrecs = ((RowRecordsAggregate)record).GetValueRecords();
-                for (int j = 0; j < valrecs.Length; j++)
+                var valrecs = ((RowRecordsAggregate)record).GetCellValueEnumerator();
+                while(valrecs.MoveNext())
                 {
-                    CellValueRecordTreeNode cvrtn = new CellValueRecordTreeNode(valrecs[j]);
-                    if (valrecs[j] is FormulaRecordAggregate)
+                    CellValueRecordTreeNode cvrtn = new CellValueRecordTreeNode(valrecs.Current);
+                    if (valrecs.Current is FormulaRecordAggregate)
                     {
-                        FormulaRecordAggregate fra = ((FormulaRecordAggregate)valrecs[j]);
+                        FormulaRecordAggregate fra = ((FormulaRecordAggregate)valrecs.Current);
                         cvrtn.ImageKey = "Folder";
                         if (fra.FormulaRecord != null)
                             cvrtn.Nodes.Add(new RecordTreeNode(fra.FormulaRecord));
