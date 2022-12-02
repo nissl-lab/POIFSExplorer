@@ -39,6 +39,8 @@ using NPOI.HSSF.Record.Aggregates;
 using NPOI.SS.Util;
 using NPOI.DDF;
 using NPOI.HSSF.Record.Chart;
+using Cpk.Net;
+using System.IO;
 
 namespace NPOI.Tools.POIFSExplorer
 {
@@ -50,7 +52,7 @@ namespace NPOI.Tools.POIFSExplorer
         public DirectoryTreeNode(DirectoryNode dn)
             : base(dn)
         {
-            
+
             this.DirectoryNode = dn;
 
             ChangeImage("Folder");
@@ -65,8 +67,8 @@ namespace NPOI.Tools.POIFSExplorer
             {
                 this.TreeView.BeginUpdate();
                 this.Nodes.Clear();
-                this.Nodes.AddRange(GetChildren(this.DirectoryNode,null));
-                
+                this.Nodes.AddRange(GetChildren(this.DirectoryNode, null));
+
                 ChangeImage("FolderOpen");
 
                 this.TreeView.EndUpdate();
@@ -78,6 +80,33 @@ namespace NPOI.Tools.POIFSExplorer
         internal void OnCollapsed()
         {
             ChangeImage("Folder");
+        }
+
+        internal static TreeNode[] GetChildren(IList<CpkEntry> nodes)
+        {
+            var children = new List<TreeNode>();
+            foreach (var node in nodes)
+            {
+                var relativePath = node.VirtualPath;
+
+                var newNode = new TreeNode();
+                if (node.IsDirectory)
+                {
+                    newNode.ImageKey = "Folder";
+                    newNode.SelectedImageKey = "Folder";
+                    newNode.Text = relativePath;
+                    children.Add(newNode);
+                    var subchildren=GetChildren(node.Children);
+
+                    newNode.Nodes.AddRange(subchildren);
+                }
+                else
+                {
+                    newNode.Text = node.VirtualPath;
+                    children.Add(newNode);
+                }
+            }
+            return children.ToArray();
         }
 
         internal static TreeNode[] GetChildren(DirectoryNode node,object innerDoc)

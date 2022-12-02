@@ -34,6 +34,8 @@ using NPOI.HPSF;
 using NPOI.POIFS.FileSystem;
 using NPOI.HSSF.UserModel;
 using NPOI.HSSF.Record;
+using Cpk.Net;
+using System.Threading.Tasks;
 
 namespace NPOI.Tools.POIFSExplorer
 {
@@ -47,7 +49,19 @@ namespace NPOI.Tools.POIFSExplorer
             InitializeComponent();
         }
 
-        private void OpenDocument(string path)
+        private async Task OpenCPKDocument(string path)
+        {
+            var cpk = new CpkArchive(path);
+            await cpk.LoadAsync(loadIntoMemory: true);
+            var rootNodes = await cpk.GetRootEntriesAsync();
+            documentTreeView.BeginUpdate();
+            documentTreeView.Nodes.Clear();
+
+            var children = DirectoryTreeNode.GetChildren(rootNodes);
+            documentTreeView.Nodes.AddRange(children);
+            documentTreeView.EndUpdate();
+        }
+        private void OpenPOIFSDocument(string path)
         {
             HSSFWorkbook hssfworkbook = null;
             //HWPFDocument hwpf = null;
@@ -203,13 +217,13 @@ namespace NPOI.Tools.POIFSExplorer
         }
 
         private string filename;
-        private void Open_Click(object sender, EventArgs e)
+        private async void Open_Click(object sender, EventArgs e)
         {
             var dialog = new OpenFileDialog()
             {
-                Filter = "Microsoft Office 97-2003 Documents|*.xls;*.doc;*.ppt|POIFS File|*.poifs|All files (*.*)|*.*",
+                Filter = "Microsoft Office 97-2003 Documents|*.xls;*.doc;*.ppt|POIFS File|*.poifs|CPK file for PAL|*.cpk|All files (*.*)|*.*",
                 Multiselect = false,
-                Title = "Open OLE2 Compund Document",
+                Title = "Open Document",
             };
 
             var result = dialog.ShowDialog(this);
@@ -217,7 +231,17 @@ namespace NPOI.Tools.POIFSExplorer
             if (result == DialogResult.OK)
             {
                 filename = dialog.FileName;
-                OpenDocument(filename);
+
+                if (filename.ToLowerInvariant().EndsWith(".cpk"))
+                {
+                    //PAL3 cpk file
+                    await OpenCPKDocument(filename);
+                }
+                else
+                {
+                    //OLE2 document
+                    OpenPOIFSDocument(filename);
+                }
 
                 ClearViewControls();
             }
@@ -266,12 +290,21 @@ namespace NPOI.Tools.POIFSExplorer
             Application.Exit();
         }
 
-        private void refreshToolScripButton_Click(object sender, EventArgs e)
+        private async void refreshToolScripButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(filename))
-                return; 
+                return;
 
-            OpenDocument(filename);
+            if (filename.ToLowerInvariant().EndsWith(".cpk"))
+            {
+                //PAL3 cpk file
+                await OpenCPKDocument(filename);
+            }
+            else
+            {
+                //OLE2 document
+                OpenPOIFSDocument(filename);
+            }
             ClearViewControls();
         }
     }
