@@ -137,6 +137,8 @@ namespace NPOI.Tools.POIFSExplorer
             {
                 var documentTreeNode = e.Node as DocumentTreeNode;
                 var stream = documentTreeNode.GetDocumentStream();
+                if (stream == null)
+                    return;
 
                 var viewableArray = documentTreeNode.DocumentNode.Document.ViewableArray;
                 if (viewableArray.Length > 0)

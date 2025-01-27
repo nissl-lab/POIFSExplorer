@@ -47,6 +47,8 @@ namespace NPOI.Tools.POIFSExplorer
         public Stream GetDocumentStream()
         {
             var document = this.DocumentNode.Document;
+            if (document == null)
+                return null;
 
             var dst = new byte[document.Size];
 
